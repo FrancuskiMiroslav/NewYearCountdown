@@ -31,6 +31,19 @@ body {
 		margin: -80px 0 40px;
 	}
 
+	.fa-snowflake {
+		animation: fall 10s linear forwards;
+		color: #ffffff;
+		position: absolute;
+		top: -20px;
+	}
+
+	@keyframes fall {
+		to {
+			transform: translateY(105vh);
+		}
+	}
+
 	.year {
 		@include fluid-typo(375px, 1920px, 100px, 200px);
 		opacity: 0.7;

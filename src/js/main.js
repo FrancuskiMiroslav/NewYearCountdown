@@ -47,6 +47,18 @@ document.addEventListener('DOMContentLoaded', function () {
 		seconds.innerHTML = s < 10 ? '0' + s : s;
 	}
 
+	function createSnowflake() {
+		const snowFlake = document.createElement('i');
+
+		snowFlake.classList.add('fas');
+		snowFlake.classList.add('fa-snowflake');
+		snowFlake.style.left = Math.random() * window.innerWidth + 'px';
+
+		document.body.appendChild(snowFlake);
+	}
+
+	setInterval(createSnowflake, 5000);
+
 	setTimeout(() => {
 		loading.remove();
 		countdown.style.display = 'flex';
