@@ -32,7 +32,7 @@ body {
 	}
 
 	.fa-snowflake {
-		animation: fall 10s linear forwards;
+		animation: fall linear forwards;
 		color: #ffffff;
 		position: absolute;
 		top: -20px;
@@ -40,7 +40,7 @@ body {
 
 	@keyframes fall {
 		to {
-			transform: translateY(105vh);
+			transform: translateY(100vh);
 		}
 	}
 

@@ -53,16 +53,24 @@ document.addEventListener('DOMContentLoaded', function () {
 		snowFlake.classList.add('fas');
 		snowFlake.classList.add('fa-snowflake');
 		snowFlake.style.left = Math.random() * window.innerWidth + 'px';
+		snowFlake.style.opacity = Math.random();
+		snowFlake.style.animationDuration = Math.random() * 3 + 2 + 's';
+		snowFlake.style.fontSize = Math.random() * 10 + 10 + 'px';
 
 		document.body.appendChild(snowFlake);
+
+		setTimeout(() => {
+			snowFlake.remove();
+		}, 5000);
 	}
 
-	setInterval(createSnowflake, 5000);
+	setInterval(createSnowflake, 1000);
 
 	setTimeout(() => {
 		loading.remove();
 		countdown.style.display = 'flex';
 	}, 1000);
 
+	setInterval(createSnowflake, 1000);
 	setInterval(updateCountdown, 1000);
 });
